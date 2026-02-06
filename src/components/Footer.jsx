@@ -63,4 +63,11 @@ export default function Footer(){
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style={{marginRight:8}} xmlns="http://www.w3.org/2000/svg"><path d="M21.7 4.3A11 11 0 0012 1C6 1 1.7 5.3 1.7 11c0 1.9.5 3.7 1.5 5.3L1 23l6.1-2c1.4.6 2.9.9 4.9.9 6 0 10.3-4.3 10.3-10.3 0-1.9-.6-3.5-1.6-4.9z" stroke="#fff" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/><path d="M17 14.6c-.3-.1-1.6-.8-1.8-.9s-.4-.1-.6.1-.7.9-.9 1.1-.4.2-.8.1a6.4 6.4 0 01-1.9-1.2 7 7 0 01-1.3-1.6c-.1-.2 0-.3.1-.4.1-.1.3-.4.5-.6.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6s0-.5-.1-.7c-.1-.2-.8-1.9-1.2-2.6-.3-.7-.6-.5-.8-.5-.2 0-.5 0-.8 0s-.6.1-.9.4c-.3.3-1 1-1 2.4s1 2.8 1.2 3c.2.2 2 3.2 4.9 4.4 2.8 1.2 2.8.8 3.3.8.5 0 1.6-.6 1.8-1.2.2-.6.2-1.1.1-1.2-.1-.1-.4-.2-.7-.3z" fill="#fff"/></svg>
               Chat on WhatsApp
             </a>
-          </d
+          </div>
+        </div>
+      </div>
+
+      <div className="footer-bottom">© 2025 JeetWeb. All rights reserved. Proudly crafted with love in India</div>
+    </footer>
+  )
+}

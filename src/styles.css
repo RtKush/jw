@@ -86,6 +86,16 @@ body{font-family:Poppins,system-ui,Arial,sans-serif;margin:0;background:var(--bg
 .footer-grid li{padding:9px 0}
 .footer-bottom{text-align:center;padding:18px;color:#6b7280;border-top:1px solid rgba(11,18,32,0.03);margin-top:28px}
 
+/* Footer polish: alignment, link styles and vertical centering */
+.footer-grid > div{display:flex;flex-direction:column}
+.footer-grid a{color:#254049;text-decoration:none;opacity:0.95}
+.footer-grid a:hover{color:var(--accent)}
+.services-col ul li a,.support-col ul li a,.quick-col ul li a{font-size:14px}
+.quick-col{justify-content:center}
+.quick-col .whatsapp-wrap{margin-top:18px}
+.footer-grid .logo-badge.large{flex:0 0 auto}
+.footer-grid .about-desc{max-width:360px}
+
 @media(max-width:900px){
   .cards{grid-template-columns:1fr}
   .test-grid{grid-template-columns:1fr}
