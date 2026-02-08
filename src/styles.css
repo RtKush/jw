@@ -13,7 +13,13 @@ body{font-family:Poppins,system-ui,Arial,sans-serif;margin:0;background:var(--bg
 .logo{display:flex;align-items:center;gap:10px}
 .logo-badge{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;font-weight:700}
 .brand{font-weight:700}
-.nav a{margin:0 12px;color:#4b5563;text-decoration:none}
+.nav a{margin:0 12px;color:#4b5563;text-decoration:none;position:relative;padding-bottom:8px}
+.nav a.active{color:var(--accent2);}
+.nav a.active::after{content:'';position:absolute;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));bottom:-10px;border-radius:4px}
+
+.nav-right{display:flex;align-items:center;gap:12px}
+.socials-right{display:flex;gap:10px}
+.socials-right a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:10px;background:#fff;color:#243140;text-decoration:none;box-shadow:0 6px 18px rgba(11,18,32,0.03)}
 
 .hero{padding:100px 0;background:linear-gradient(180deg, rgba(245,247,250,1) 0%, rgba(255,255,255,1) 100%)}
 .hero-title{font-size:84px;margin:0;line-height:0.9;font-weight:800;font-family:Montserrat, Poppins}

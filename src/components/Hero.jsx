@@ -10,14 +10,18 @@ export default function Hero(){
       <div className="container">
         <motion.div className="hero-content" variants={container} initial="hidden" animate="show">
           <motion.h1 className="hero-title" variants={fadeUp}>
-            Let's Build <span className="gradient">Together</span>
+            We Build Websites &amp; AI Solutions
+            <br/>
+            <span className="gradient">That Grow Your Business</span>
           </motion.h1>
-          <motion.h2 className="hero-sub" variants={fadeUp}>Your Success Is Our Mission</motion.h2>
+
           <motion.p className="hero-lead" variants={fadeUp}>
-            JEETWEB — India’s First AI-Powered Smart Business Platform. One platform. All solutions. Zero headache.
+            Professional web development, automation tools, and AI-powered solutions to take your
+            business to the next level.
           </motion.p>
+
           <motion.div className="hero-cta" variants={fadeUp}>
-            <a className="btn-primary" href="#contact">Start Your Project Now</a>
+            <a className="btn-primary" href="#contact">Get Started Now</a>
           </motion.div>
         </motion.div>
       </div>
