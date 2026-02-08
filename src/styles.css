@@ -350,7 +350,7 @@ body{font-family:Poppins,system-ui,Arial,sans-serif;margin:0;background:var(--bg
 }
 
 .pricing-card.standard {
-  background: oklch(78.9% .154 211.53);
+  background: oklch(70.716% 0.15245 236.133);
   color: #fff;
 }
 
@@ -370,12 +370,28 @@ body{font-family:Poppins,system-ui,Arial,sans-serif;margin:0;background:var(--bg
   position: absolute;
   top: -14px;
   left: 20px;
-  background: var(--accent);
-  color: #fff;
-  font-size: 0.7rem;
   padding: 6px 14px;
-  border-radius: 999px;
+  font-size: 15px;
   font-weight: 600;
+  border-radius: 20px;
+  color: var(--text);
+  letter-spacing: 0.5px;
+}
+
+.pricing-card.basic .pricing-badge {
+  background: rgb(239, 211, 70);
+}
+
+.pricing-card.standard .pricing-badge {
+  background: rgb(239, 211, 70);
+}
+
+.pricing-card.advance .pricing-badge {
+  background: oklch(68.636% 0.20384 42.163);
+}
+
+.pricing-card.premium .pricing-badge {
+  background: oklch(61.522% 0.24906 28.072);
 }
 
 .pricing-badge.best {
@@ -387,19 +403,19 @@ body{font-family:Poppins,system-ui,Arial,sans-serif;margin:0;background:var(--bg
   font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 6px;
-  color: var(--text);
+  color: var(--bg);
 }
 
 .pricing-subtitle {
   font-size: 0.9rem;
-  color: var(--accent);
+  color: var(--bg);
   margin-bottom: 14px;
 }
 
 .pricing-ideal {
   font-size: 0.85rem;
   margin-bottom: 20px;
-  color: var(--text);
+  color: var(--bg);
   opacity: 0.8;
 }
 
@@ -412,7 +428,7 @@ body{font-family:Poppins,system-ui,Arial,sans-serif;margin:0;background:var(--bg
 .pricing-card ul li {
   font-size: 0.85rem;
   padding: 6px 0;
-  color: var(--text);
+  color: var(--bg);
   opacity: 0.9;
 }
 
@@ -422,43 +438,34 @@ body{font-family:Poppins,system-ui,Arial,sans-serif;margin:0;background:var(--bg
 
 .pricing-card ul li {
   position: relative;
-  padding-left: 26px;
+  /* padding-left: 26px; */
   margin-bottom: 8px;
   line-height: 1.4;
 }
 
-/* Right / Check icon */
-.pricing-card ul li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--accent);
-}
-
 /* Optional: premium card slightly different */
 .pricing-card.premium ul li::before {
-  color: var(--accent2);
+  color: var(--bg);
 }
 
 /* -------- PRICE -------- */
 .pricing-price {
   margin-top: auto;
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .pricing-price del {
-  font-size: 0.85rem;
+  font-size: 1.2rem;
   opacity: 0.6;
   margin-right: 8px;
 }
 
 .pricing-price span {
-  font-size: 1.7rem;
+  font-size: 2rem;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--bg);
 }
 
 /* -------- BUTTON -------- */
@@ -476,6 +483,7 @@ body{font-family:Poppins,system-ui,Arial,sans-serif;margin:0;background:var(--bg
 .pricing-card button:hover {
   background: var(--accent2);
   transform: translateY(-2px);
+  border: 2px solid white;
 }
 
 /* -------- HIGHLIGHT (BEST SELLING) -------- */
