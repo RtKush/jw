@@ -303,7 +303,10 @@ export default function Services() {
         <div className="container">
           <h2>Ready to Grow Your Business?</h2>
           <p>Let’s build something powerful together.</p>
-          <button>Contact Us</button>
+
+          <a href="#contact" className="services-cta-btn">
+            Contact Us
+          </a>
         </div>
       </div>
     </section>
