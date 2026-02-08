@@ -356,7 +356,7 @@ body{font-family:Poppins,system-ui,Arial,sans-serif;margin:0;background:var(--bg
 }
 
 .pricing-card.standard {
-  background: oklch(78.9% .154 211.53);
+  background: oklch(70.716% 0.15245 236.133);
   color: #fff;
 }
 
@@ -373,19 +373,55 @@ body{font-family:Poppins,system-ui,Arial,sans-serif;margin:0;background:var(--bg
 
 /* -------- BADGE -------- */
 .pricing-badge {
-  position: absolute;
-  top: -14px;
-  left: 20px;
-  background: var(--accent);
-  color: #fff;
-  font-size: 0.7rem;
+  position: relative;
+  overflow: hidden;
   padding: 6px 14px;
-  border-radius: 999px;
+  font-size: 15px;
   font-weight: 600;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  color: var(--text);
+  letter-spacing: 0.5px;
+}
+
+.pricing-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 25px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  /* shape like your image */
+  border-bottom-left-radius: 22px;
+  border-top-right-radius: 12px;
+  /* remove other corners */
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  z-index: 3;
+}
+
+.pricing-card.basic .pricing-badge {
+  background: rgb(239, 211, 70);
+}
+
+.pricing-card.standard .pricing-badge {
+  background: rgb(239, 211, 70);
+}
+
+.pricing-card.advance .pricing-badge {
+  background: oklch(68.636% 0.20384 42.163);
+}
+
+.pricing-card.premium .pricing-badge {
+  background: oklch(61.522% 0.24906 28.072);
 }
 
 .pricing-badge.best {
   background: var(--accent2);
+  letter-spacing: 0.9px;
+  top: -1px;
 }
 
 /* -------- TEXT -------- */
@@ -393,19 +429,19 @@ body{font-family:Poppins,system-ui,Arial,sans-serif;margin:0;background:var(--bg
   font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 6px;
-  color: var(--text);
+  color: var(--bg);
 }
 
 .pricing-subtitle {
   font-size: 0.9rem;
-  color: var(--accent);
+  color: var(--bg);
   margin-bottom: 14px;
 }
 
 .pricing-ideal {
   font-size: 0.85rem;
   margin-bottom: 20px;
-  color: var(--text);
+  color: var(--bg);
   opacity: 0.8;
 }
 
@@ -418,7 +454,7 @@ body{font-family:Poppins,system-ui,Arial,sans-serif;margin:0;background:var(--bg
 .pricing-card ul li {
   font-size: 0.85rem;
   padding: 6px 0;
-  color: var(--text);
+  color: var(--bg);
   opacity: 0.9;
 }
 
@@ -428,43 +464,34 @@ body{font-family:Poppins,system-ui,Arial,sans-serif;margin:0;background:var(--bg
 
 .pricing-card ul li {
   position: relative;
-  padding-left: 26px;
+  /* padding-left: 26px; */
   margin-bottom: 8px;
   line-height: 1.4;
 }
 
-/* Right / Check icon */
-.pricing-card ul li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--accent);
-}
-
 /* Optional: premium card slightly different */
 .pricing-card.premium ul li::before {
-  color: var(--accent2);
+  color: var(--bg);
 }
 
 /* -------- PRICE -------- */
 .pricing-price {
   margin-top: auto;
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .pricing-price del {
-  font-size: 0.85rem;
+  font-size: 1.2rem;
   opacity: 0.6;
   margin-right: 8px;
 }
 
 .pricing-price span {
-  font-size: 1.7rem;
+  font-size: 2rem;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--bg);
 }
 
 /* -------- BUTTON -------- */
@@ -482,11 +509,61 @@ body{font-family:Poppins,system-ui,Arial,sans-serif;margin:0;background:var(--bg
 .pricing-card button:hover {
   background: var(--accent2);
   transform: translateY(-2px);
+  border: 2px solid white;
 }
 
 /* -------- HIGHLIGHT (BEST SELLING) -------- */
 .pricing-card.highlight {
   border: 5px solid rgb(239, 211, 70)
+}
+
+/* ===== Services CTA Section ===== */
+
+.services-cta {
+  margin-top: 50px;
+  padding: 60px 20px;
+  background: linear-gradient(
+    135deg,
+    var(--accent),
+    var(--accent2)
+  );
+  text-align: center;
+  border-radius: 25px;
+  color: #fff;
+}
+
+.services-cta .container {
+  max-width: 900px;
+}
+
+.services-cta h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.services-cta p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  margin-bottom: 30px;
+}
+
+/* CTA Button */
+.services-cta button {
+  background: #fff;
+  color: var(--accent);
+  border: none;
+  padding: 14px 34px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.services-cta button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 }
 
 /* -------- RESPONSIVE -------- */
