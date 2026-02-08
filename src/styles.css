@@ -367,15 +367,33 @@ body{font-family:Poppins,system-ui,Arial,sans-serif;margin:0;background:var(--bg
 
 /* -------- BADGE -------- */
 .pricing-badge {
-  position: absolute;
-  top: -14px;
-  left: 20px;
+  position: relative;
+  overflow: hidden;
   padding: 6px 14px;
   font-size: 15px;
   font-weight: 600;
-  border-radius: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
   color: var(--text);
   letter-spacing: 0.5px;
+}
+
+.pricing-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 25px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  /* shape like your image */
+  border-bottom-left-radius: 22px;
+  border-top-right-radius: 12px;
+  /* remove other corners */
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  z-index: 3;
 }
 
 .pricing-card.basic .pricing-badge {
@@ -396,6 +414,8 @@ body{font-family:Poppins,system-ui,Arial,sans-serif;margin:0;background:var(--bg
 
 .pricing-badge.best {
   background: var(--accent2);
+  letter-spacing: 0.9px;
+  top: -1px;
 }
 
 /* -------- TEXT -------- */
@@ -489,6 +509,55 @@ body{font-family:Poppins,system-ui,Arial,sans-serif;margin:0;background:var(--bg
 /* -------- HIGHLIGHT (BEST SELLING) -------- */
 .pricing-card.highlight {
   border: 5px solid rgb(239, 211, 70)
+}
+
+/* ===== Services CTA Section ===== */
+
+.services-cta {
+  margin-top: 50px;
+  padding: 60px 20px;
+  background: linear-gradient(
+    135deg,
+    var(--accent),
+    var(--accent2)
+  );
+  text-align: center;
+  border-radius: 25px;
+  color: #fff;
+}
+
+.services-cta .container {
+  max-width: 900px;
+}
+
+.services-cta h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.services-cta p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  margin-bottom: 30px;
+}
+
+/* CTA Button */
+.services-cta button {
+  background: #fff;
+  color: var(--accent);
+  border: none;
+  padding: 14px 34px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.services-cta button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 }
 
 /* -------- RESPONSIVE -------- */
