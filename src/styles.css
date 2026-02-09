@@ -695,3 +695,264 @@ body{font-family:Poppins,system-ui,Arial,sans-serif;margin:0;background:var(--bg
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== Portfolio Section ===== */
+.portfolio-section {
+  padding: 80px 0;
+  background: var(--bg);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: var(--text);
+}
+
+/* Force single horizontal row */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* Card */
+.portfolio-card {
+  background: var(--card);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: all 0.35s ease;
+}
+
+/* Same height cards */
+.portfolio-card img {
+  width: 100%;
+  height: 260px;            /* 🔥 keeps all cards equal */
+  object-fit: cover;
+  display: block;
+}
+
+/* Subtle premium hover */
+.portfolio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
+
+/* Responsive fallback */
+@media (max-width: 1024px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-card img {
+    height: 220px;
+  }
+}
+
+/* ===== Portfolio Importance Section ===== */
+.portfolio-importance-section {
+  padding: 80px 0;
+  background: var(--bg);
+}
+
+.portfolio-importance-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 125px;
+  align-items: stretch;
+}
+
+/* SHARED CARD STYLES */
+.portfolio-importance-left,
+.portfolio-importance-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100%;
+  padding: 42px;
+  border-radius: 20px;
+}
+
+/* LEFT */
+.portfolio-importance-left {
+  background: transparent;
+}
+
+.portfolio-importance-left h2 {
+  font-size: 2rem;
+  margin-bottom: 26px;
+  color: var(--text);
+}
+
+/* RIGHT */
+.portfolio-importance-right {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #fff;
+}
+
+.portfolio-importance-right h2 {
+  font-size: 2rem;
+  margin-bottom: 26px; /* SAME AS LEFT */
+}
+
+/* LEFT LIST */
+.portfolio-importance-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style: disc;
+}
+
+.portfolio-importance-list li {
+  margin-bottom: 1px;
+}
+
+.portfolio-importance-list strong {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.portfolio-importance-list p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* RIGHT LIST */
+.portfolio-help-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.portfolio-help-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 20px;
+}
+
+.portfolio-help-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+}
+
+.portfolio-help-list strong {
+  display: block;
+  font-size: 0.95rem;
+}
+
+.portfolio-help-list span {
+  font-size: 0.9rem;
+  opacity: 0.95;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .portfolio-importance-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ===== Portfolio Projects ===== */
+.portfolio-projects {
+  padding: 80px 0;
+  background: var(--bg);
+}
+
+.portfolio-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.portfolio-header h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.portfolio-header p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Grid */
+.portfolio-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* Card */
+.project-card {
+  background: var(--card);
+  padding: 28px;
+  border-radius: 18px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.project-card span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Hover */
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* View All */
+.portfolio-view-all {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.view-all-btn {
+  display: inline-block;
+  font-size: 1rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.view-all-btn:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .portfolio-projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-projects-grid {
+    grid-template-columns: 1fr;
+  }
+}

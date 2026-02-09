@@ -7,6 +7,7 @@ import Testimonials from './components/Testimonials'
 import WhyChoose from './components/WhyChoose'
 import Footer from './components/Footer'
 import Contact from './components/Contact'
+import Portfolio from './components/Portfolio'
 
 export default function App(){
   return (
@@ -16,6 +17,7 @@ export default function App(){
         <Hero />
         <About />
         <Services />
+        <Portfolio />
         <WhyChoose />
         <Testimonials />
         <Contact/>
