@@ -3,6 +3,14 @@ import img1 from "../images/img1.png";
 import img2 from "../images/img2.jpg";
 import img3 from "../images/img3.png";
 import img4 from "../images/img4.png";
+import p1 from "../images/p1.jpg";
+import p2 from "../images/p2.jpg";
+import p3 from "../images/p3.jpg";
+import p4 from "../images/p4.jpg";
+import p5 from "../images/p5.jpg";
+import p6 from "../images/p6.jpg";
+import p7 from "../images/p7.jpg";
+import p8 from "../images/p8.jpg";
 
 const portfolioImages = [
   { src: img1, alt: "Sales Growth" },
@@ -151,59 +159,78 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* ===== Portfolio Projects Section ===== */}
-      <section className="portfolio-projects">
+      {/* ===== Portfolio Showcase Section ===== */}
+      <section className="portfolio-showcase">
         <div className="container">
           <div className="portfolio-header">
-            <h2>Our Portfolio</h2>
-            <p>Our best work from different industries</p>
+            <h2>Our Work</h2>
+            <p>Selected projects we’re proud of</p>
           </div>
 
-          <div className="portfolio-projects-grid">
-            <div className="project-card">
+          <div className="portfolio-showcase-grid">
+            <div className="showcase-card">
+              <img src={p1} alt="Solar Panel Website" />
               <h3>Solar Panel Website</h3>
-              <span>Solar Panel Company</span>
             </div>
 
-            <div className="project-card">
+            <div className="showcase-card">
+              <img src={p2} alt="Restaurant Website" />
               <h3>Restaurant Website</h3>
-              <span>Multi-Cuisine Restaurant</span>
             </div>
 
-            <div className="project-card">
+            <div className="showcase-card">
+              <img src={p3} alt="Food Delivery App" />
               <h3>Food Delivery App</h3>
-              <span>Food Ordering Platform</span>
             </div>
 
-            <div className="project-card">
+            <div className="showcase-card">
+              <img src={p4} alt="Gym Website" />
               <h3>Gym Website</h3>
-              <span>Fitness & Gym Chain</span>
             </div>
 
-            <div className="project-card">
+            <div className="showcase-card">
+              <img src={p5} alt="Fashion Store" />
               <h3>Fashion Store</h3>
-              <span>Fashion Boutique</span>
             </div>
 
-            <div className="project-card">
+            <div className="showcase-card">
+              <img src={p6} alt="Solar Energy" />
               <h3>Solar Energy</h3>
-              <span>Solar Energy</span>
             </div>
 
-            <div className="project-card">
+            <div className="showcase-card">
+              <img src={p7} alt="Corporate Website" />
               <h3>Corporate Website</h3>
-              <span>Corporate Business</span>
             </div>
 
-            <div className="project-card">
+            <div className="showcase-card">
+              <img src={p8} alt="Automotive Website" />
               <h3>Automotive Website</h3>
-              <span>Luxury Car Dealership</span>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="portfolio-view-all">
-            <a href="#" className="view-all-btn">
-              View All Projects →
+      {/* ===== Summary Section ===== */}
+      <section className="summary-section">
+        <div className="container">
+          <h2>Summary</h2>
+
+          <p>
+            A website is the most important business tool today. Jeetweb builds
+            powerful, trust-focused and lead-generating websites that help
+            businesses grow, rank higher on Google, and convert more customers.
+          </p>
+
+          {/* Heading instead of button */}
+          <h3 className="summary-heading">Let’s work together</h3>
+
+          <div className="summary-actions">
+            <a href="tel:+919999999999" className="btn primary-btn">
+              Call Now
+            </a>
+            <a href="#demo" className="btn outline-btn">
+              Book Our Demo
             </a>
           </div>
         </div>
